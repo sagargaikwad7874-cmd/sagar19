@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sagar Portfolio</title>
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: #0077ff;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+.section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===== HOME PAGE ===== */
+#home { 
+    color: white; 
+    background: linear-gradient(135deg, #4facfe, #00f2fe, #43e97b, #f9d423);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* GRADIENT ANIMATION */
+@keyframes gradientBG {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.home-text {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.3s;
+    font-size: 2.5em;
+}
+
+.home-subtext {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.6s;
+    font-size: 1.2em;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== ABOUT PAGE ===== */
+#about {
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    color: #333;
+}
+
+/* ===== PERSONAL INFO PAGE ===== */
+#personal {
+    background: linear-gradient(135deg, #a8ff78, #78ffd6);
+    color: #333;
+}
+
+/* ===== ACADEMY PAGE ===== */
+#academy {
+    background: linear-gradient(135deg, #c3cfe2, #c3aed6);
+    color: #333;
+}
+
+/* ===== CONTACT PAGE ===== */
+#contact {
+    background: linear-gradient(135deg, #ffd89b, #19547b);
+    color: black; /* Fakta contact section madhe text black */
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #0077ff;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #005bb5;
+    transform: scale(1.05);
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.95);
+    padding: 20px;
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+img {
+    width: 120px;
+    border-radius: 50%;
+    border: 3px solid #0077ff;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background: #0077ff;
+    color: white;
+}
+
+.personal-icon {
+    color: #0077ff;
+    margin-right: 8px;
+}
+
+.insta {
+    color: #E1306C;
+    font-size: 20px;
+}
+
+.card h2 {
+    color: #0077ff;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#personal">Personal Info</a>
+    <a href="#academy">Academy</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- HOME -->
+<div id="home" class="section">
+    <h1 class="home-text">Hello, I'm Sagar 👋</h1>
+    <p class="home-subtext">Web Developer | Student</p>
+    <a href="#about" class="btn home-subtext">Go to About</a>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="section">
+    <div class="card">
+        <img src="https://via.placeholder.com/120" alt="Sagar Gaikwad">
+        <h2>Sagar Gaikwad</h2>
+        <p>Hello! I am a passionate Web Developer learning modern web technologies and building interactive websites. I enjoy experimenting with new designs and improving my coding skills every day.</p>
+
+        <h3>Skills</h3>
+        <p>HTML, CSS, JavaScript, Responsive Design, Basic React</p>
+
+        <h3>Interests</h3>
+        <p>💻 Web Development | 🎨 UI/UX Design | 📚 Learning New Tech | 🚀 Problem Solving</p>
+
+        <a href="#personal" class="btn">Go to Personal Info</a>
+    </div>
+</div>
+
+<!-- PERSONAL INFORMATION -->
+<div id="personal" class="section">
+    <div class="card">
+        <h2>Personal Information</h2>
+        <table>
+            <tr>
+                <th><i class="fas fa-user personal-icon"></i>Name</th>
+                <td>Sagar Siddheshwar Gaikwad</td>
+            </tr>
+            <tr>
+                <th><i class="fas fa-graduation-cap personal-icon"></i>Branch</th>
+                <td>CSE</td>
+            </tr>
+            <tr>
+                <th><i class="fas fa-calendar personal-icon"></i>Date of Birth</th>
+                <td>05-05-2009</td>
+            </tr>
+            <tr>
+                <th><i class="fas fa-map-marker-alt personal-icon"></i>Address</th>
+                <td>Shirasi, Tal-Mangalwedha, Dist-Solapur</td>
+            </tr>
+            <tr>
+                <th><i class="fas fa-mars personal-icon"></i>Gender</th>
+                <td>Male</td>
+            </tr>
+        </table>
+
+        <a href="#academy" class="btn">Go to Academy</a>
+    </div>
+</div>
+
+<!-- ACADEMY -->
+<div id="academy" class="section">
+    <div class="card">
+        <h2>My Academy</h2>
+        <table>
+            <tr>
+                <th colspan="2">Sagar Siddheshwar Gaikwad</th>
+            </tr>
+            <tr>
+                <th>Education</th>
+                <th>Marks</th>
+            </tr>
+            <tr>
+                <td>Current Semester</td>
+                <td>83.80%</td>
+            </tr>
+            <tr>
+                <td>10th Standard</td>
+                <td>84.80%</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+    <div class="card">
+        <h2>Contact Me</h2>
+        <p>Email: sagargaikwad7874@gmail.com</p>
+        <p>Phone: 9356988852</p>
+        <p><i class="fab fa-instagram insta"></i> its_sagar_7874</p>
+    </div>
+</div>
+
+</body>
+</html>
